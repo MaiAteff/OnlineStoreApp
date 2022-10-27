@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.SignIn"
+    android:gravity="bottom">
+
+
+    <ImageView
+        android:id="@+id/signinBackground"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:src="@drawable/signin_background"/>
+
+    <TextView
+        android:layout_below="@+id/signinBackground"
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enjoy Shopping with\nHappines Store"
+        android:textSize="23dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="20dp"/>
+
+    <LinearLayout
+        android:id="@+id/number"
+        android:layout_below="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:src="@drawable/icon"
+            android:layout_marginLeft="20dp"/>
+
+        <TextView
+            android:layout_toEndOf="@+id/icon"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="+880"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:textSize="16dp"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/vector"
+        android:layout_below="@id/number"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:src="@drawable/vector"/>
+
+    <TextView
+        android:id="@+id/or"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/vector"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Or connect with social media"
+        android:gravity="center"/>
+
+    <ImageView
+        android:id="@+id/google"
+        android:layout_below="@id/or"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:src="@drawable/google"
+        android:layout_marginTop="30dp"/>
+
+    <ImageView
+        android:id="@+id/facebook"
+        android:layout_below="@id/google"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/facebook"
+        android:layout_marginBottom="30dp"/>
+
+
+</RelativeLayout>

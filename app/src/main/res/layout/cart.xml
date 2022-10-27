@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.Cart">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="My Cart"
+        android:textColor="#181725"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_margin="5dp"
+        android:layout_below="@+id/text"
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="LinearLayoutManager"
+        android:paddingBottom="110dp"
+        tools:itemCount="1"
+        tools:listitem="@layout/cart_item" />
+
+    <RelativeLayout
+        android:id="@+id/bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="bottom">
+
+        <ImageView
+            android:id="@+id/goToCheckOut"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/go_to_checkout"/>
+
+        <TextView
+            android:id="@+id/total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/goToCheckOut"
+            android:layout_alignBottom="@+id/goToCheckOut"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="245dp"
+            android:layout_marginTop="16.5dp"
+            android:layout_marginBottom="16.5dp"
+            android:background="#FFB220"
+            android:padding="4dp"
+            android:text="$50"
+            android:textColor="@color/white"
+            android:textSize="12dp" />
+
+        <LinearLayout
+            android:layout_below="@+id/goToCheckOut"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageView
+                app:tint="#181725"
+                android:id="@+id/shop"
+                android:layout_weight="1"
+                android:paddingTop="13dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/shop_icon"/>
+
+            <ImageView
+                android:id="@+id/explore"
+                android:layout_weight="1"
+                android:paddingTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/explore_icon"/>
+
+            <ImageView
+                android:id="@+id/cart"
+                android:layout_weight="1"
+                android:paddingTop="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/cart_icon"
+                app:tint="#FFBF45"/>
+
+            <ImageView
+                android:id="@+id/favourite"
+                android:layout_weight="1"
+                android:paddingTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/favourite_icon"/>
+
+            <ImageView
+                android:id="@+id/account"
+                android:layout_weight="1"
+                android:paddingTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/account_icon"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

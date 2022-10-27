@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/number_background"
+    tools:context=".view.Number">
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/back_icon"
+        android:padding="15dp"/>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_below="@+id/back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter your mobile number"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:textColor="@color/black"
+        android:textSize="26dp"/>
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_below="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="Mobile Number"
+        android:textColor="#7C7C7C"
+        android:textSize="16dp"
+        android:layout_marginTop="15dp"/>
+
+
+    <LinearLayout
+        android:id="@+id/number"
+        android:layout_below="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:src="@drawable/icon"
+            android:layout_marginLeft="20dp"/>
+
+        <EditText
+            android:layout_toEndOf="@+id/icon"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="16dp"
+            android:background="@null"
+            android:text="+880"
+            android:inputType="phone"
+            android:textCursorDrawable="@color/black"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/vector"
+        android:layout_below="@id/number"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:src="@drawable/vector"/>
+
+    <ImageView
+        android:id="@+id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/vector"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="135dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/next_icon" />
+
+
+</RelativeLayout>

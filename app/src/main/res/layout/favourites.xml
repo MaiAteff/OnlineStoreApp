@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.Favourites">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Favourite"
+        android:textColor="#181725"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_margin="5dp"
+        android:layout_below="@+id/text"
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="LinearLayoutManager"
+        android:paddingBottom="110dp"
+        tools:itemCount="1"
+        tools:listitem="@layout/favourite_item" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="bottom">
+
+        <ImageView
+            android:id="@+id/addAllToCart"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/add_all_to_cart"/>
+
+        <LinearLayout
+            android:layout_below="@+id/addAllToCart"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/shop"
+                android:layout_weight="1"
+                android:paddingTop="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/shop_icon"/>
+
+            <ImageView
+                android:id="@+id/explore"
+                android:layout_weight="1"
+                android:paddingTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/explore_icon"/>
+
+            <ImageView
+                android:id="@+id/cart"
+                android:layout_weight="1"
+                android:paddingTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/cart_icon"/>
+
+            <ImageView
+                android:id="@+id/favourite"
+                android:layout_weight="1"
+                android:paddingTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/favourite_icon"
+                app:tint="#FFBF45"/>
+
+            <ImageView
+                android:id="@+id/account"
+                android:layout_weight="1"
+                android:paddingTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/account_icon"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
